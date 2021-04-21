@@ -1,12 +1,13 @@
 ﻿using System;
 
+
 namespace ClassLibrarySqr
 {
     public class Figure
     {
         double r;
         private double sqr;
-        double[] side = new double[3];
+        double[] side;
         public Figure(double radius)
         {
             this.r = radius;
@@ -16,6 +17,7 @@ namespace ClassLibrarySqr
 
         public Figure(double x1, double x2, double x3)
         {
+            this.side = new double[3];
             this.side[0] = x1;
             this.side[1] = x2;
             this.side[2] = x3;
@@ -41,7 +43,7 @@ namespace ClassLibrarySqr
             {
                 Console.WriteLine("это не треугольник");
             }
-          
+
             return res;
         }
     }
